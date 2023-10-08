@@ -1,0 +1,12 @@
+------------------------------------Final Output of This Project------------------------------------
+
+Duplicate Files Names With There Directory Names are : [['C:/Users/ADMIN/Downloads\\130000004_ExamForm - Copy - Copy.pdf', 'C:/Users/ADMIN/Downloads\\130000004_ExamForm - Copy.pdf']]
+
+Path Deleted are : C:/Users/ADMIN/Downloads\130000004_ExamForm - Copy.pdf, 
+
+Total Numbers of Files in Entered Directory were : 2
+
+Number of Files After Deleteing Duplicate Files are : 1
+
+---------------------Thank You For Using This Application Now You Can Check Your Directory--------------------
+Time Taken BY Program is : 152.002527 sec :

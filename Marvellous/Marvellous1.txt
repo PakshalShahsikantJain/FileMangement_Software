@@ -9,4 +9,4 @@ Total Numbers of Files in Entered Directory were : 0
 Number of Files After Deleteing Duplicate Files are : 0
 
 ---------------------Thank You For Using This Application Now You Can Check Your Directory--------------------
-Time Taken BY Program is : 58.232246 sec :
+Time Taken BY Program is : 161.725410 sec :

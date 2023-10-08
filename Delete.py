@@ -11,5 +11,7 @@ def click(res,res2,res3,res4) :
         schedule.run_pending()
         time.sleep(1)
 
-
+def Stop_Scheduling() :
+    schedule.clear();
+    return;
 

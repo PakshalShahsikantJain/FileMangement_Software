@@ -48,7 +48,8 @@ def Click(window) :
     print("Directory Path  : ",filepath);
     
     #Call to click() function imported from Delete Package
-    click(filepath,res,res2,res3);
+    thread = threading.Thread(target=click,args=(filepath,res,res2,res3,))
+    thread.start()
 
 ##################################################################################################################
 
@@ -98,7 +99,7 @@ def SCRIPT(window) :
     Btn.place(relx = 0.3,rely=0.7,anchor=CENTER)
 
     #Using Below Button Close() Function is Called
-    Quit_btn = tkinter.Button(window2, text="Close", font=(24),bg="Dark Gray",fg="white",height=2,width=16,command=lambda:Close(window2))
+    Quit_btn = tkinter.Button(window2, text="Close", font=(24),bg="Dark Gray",fg="white",height=2,width=16,command=lambda:DeleteClose(window2))
     Quit_btn.place(relx = 0.7,rely=0.7,anchor=CENTER);
 
 ##################################################################################################################################################
@@ -136,12 +137,17 @@ def SORT(window) :
     Btn.place(relx = 0.3,rely=0.6,anchor=CENTER)
 
     #Using Below Button Close() function is Called 
-    Quit_btn = tkinter.Button(window3, text="Close", font=(24),bg="Dark Gray",fg="white",height=2,width=20,command=lambda:Close(window3))
+    Quit_btn = tkinter.Button(window3, text="Close", font=(24),bg="Dark Gray",fg="white",height=2,width=20,command=lambda:SortClose(window3))
     Quit_btn.place(relx = 0.7,rely=0.6,anchor=CENTER);
 
 #############################################################################################################################################################
 
-def Close(window) :
+def DeleteClose(window) :
+    Stop_Scheduling();
+    window.destroy();
+    main();
+
+def SortClose(window) :
     window.destroy();
     main();
 

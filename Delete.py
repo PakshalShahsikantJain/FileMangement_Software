@@ -11,6 +11,7 @@ def click(res,res2,res3,res4) :
         schedule.run_pending()
         time.sleep(1)
 
+#Function To Stop Scheduling After Window is Closed
 def Stop_Scheduling() :
     schedule.clear();
     return;

@@ -142,11 +142,15 @@ def SORT(window) :
 
 #############################################################################################################################################################
 
+#Function To Close Specific Function Window
 def DeleteClose(window) :
     Stop_Scheduling();
     window.destroy();
     main();
 
+#############################################################################################################################################
+
+#Function To Close Specific Function Window
 def SortClose(window) :
     window.destroy();
     main();

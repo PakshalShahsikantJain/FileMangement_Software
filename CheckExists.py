@@ -4,7 +4,7 @@ from DirectoryTraversal import *
 from Duplicate import *
 
 #Directory Path Entry From Where Duplicate Files Have to be deleted
-def CheckExits(DirectoryName,UsersEmailAdd,Password,SendersMailAdd) :
+def CheckExists(DirectoryName,UsersEmailAdd,Password,SendersMailAdd) :
     duplicate = {}
 
     if not os.path.exists(DirectoryName) :

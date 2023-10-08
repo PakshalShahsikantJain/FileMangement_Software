@@ -6,6 +6,7 @@
 ##
 ###################################################################################################################################
 
+from All_imports import *
 import shutil 
 import os
 
@@ -20,8 +21,7 @@ def Sort(path) :
             arr = [] 
             brr = []
             brr.append(file)
-            print(brr)
-
+            
             file_extension = os.path.splitext(file)[-1].lower()
             
             arr.append(file_extension)
@@ -31,5 +31,13 @@ def Sort(path) :
             if not os.path.exists(final_Directory) :
                 os.mkdir(final_Directory)
             
-            for i in range(len(arr)) :
-                shutil.move(current_Directory+'/'+file,current_Directory+'/'+arr[i]+'/'+file)
+            try : 
+                for i in range(len(arr)) :
+                    shutil.move(current_Directory+'/'+file,current_Directory+'/'+arr[i]+'/'+file);
+            except FileNotFoundError :
+                print("File Already Have Been Moved");
+                messagebox.showinfo("Message","Files Sorted Successfully");
+                return;
+            except :
+                print("Another Error Occured");
+                return;

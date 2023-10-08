@@ -28,8 +28,6 @@ def Click(window) :
     if (len(res) == 0 or len(res2) == 0 or len(res3) == 0) :
         #Message Box Used To Display Specific Message
         messagebox.showinfo("Error : ","Please Fill Up The Required Data!\nTry Again!")
-        window.destroy();
-        main();
         return;
 
     txt.delete(0,END);

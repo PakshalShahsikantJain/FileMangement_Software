@@ -1,12 +1,12 @@
 ------------------------------------Final Output of This Project------------------------------------
 
-Duplicate Files Names With There Directory Names are : []
+Duplicate Files Names With There Directory Names are : [['C:/Users/ADMIN/Desktop/AwasNiwasCommitee_AdharCard_Record/BandWale\\IMG-20240118-WA0030.jpg', 'C:/Users/ADMIN/Desktop/AwasNiwasCommitee_AdharCard_Record/BandWale\\WhatsApp Image 2024-01-18 at 21.46.01_c80ccb69.jpg'], ['C:/Users/ADMIN/Desktop/AwasNiwasCommitee_AdharCard_Record/BandWale\\IMG-20240118-WA0039.jpg', 'C:/Users/ADMIN/Desktop/AwasNiwasCommitee_AdharCard_Record/BandWale\\WhatsApp Image 2024-01-18 at 22.02.45_6078409a.jpg'], ['C:/Users/ADMIN/Desktop/AwasNiwasCommitee_AdharCard_Record/BandWale\\WhatsApp Image 2024-01-18 at 21.46.09_fa3f8da6.jpg', 'C:/Users/ADMIN/Desktop/AwasNiwasCommitee_AdharCard_Record/BandWale\\WhatsApp Image 2024-01-21 at 23.29.12_051ad186.jpg'], ['C:/Users/ADMIN/Desktop/AwasNiwasCommitee_AdharCard_Record/BandWale\\WhatsApp Image 2024-01-18 at 22.12.25_0780eb71.jpg', 'C:/Users/ADMIN/Desktop/AwasNiwasCommitee_AdharCard_Record/BandWale\\WhatsApp Image 2024-01-21 at 23.29.13_ff0a3c92.jpg']]
 
-Path Deleted are : 
+Path Deleted are : C:/Users/ADMIN/Desktop/AwasNiwasCommitee_AdharCard_Record/BandWale\WhatsApp Image 2024-01-18 at 21.46.01_c80ccb69.jpg, C:/Users/ADMIN/Desktop/AwasNiwasCommitee_AdharCard_Record/BandWale\WhatsApp Image 2024-01-18 at 22.02.45_6078409a.jpg, C:/Users/ADMIN/Desktop/AwasNiwasCommitee_AdharCard_Record/BandWale\WhatsApp Image 2024-01-21 at 23.29.12_051ad186.jpg, C:/Users/ADMIN/Desktop/AwasNiwasCommitee_AdharCard_Record/BandWale\WhatsApp Image 2024-01-21 at 23.29.13_ff0a3c92.jpg, 
 
-Total Numbers of Files in Entered Directory were : 0
+Total Numbers of Files in Entered Directory were : 8
 
-Number of Files After Deleteing Duplicate Files are : 0
+Number of Files After Deleteing Duplicate Files are : 4
 
 ---------------------Thank You For Using This Application Now You Can Check Your Directory--------------------
-Time Taken BY Program is : 100.873253 sec :
+Time Taken BY Program is : 95.012939 sec :

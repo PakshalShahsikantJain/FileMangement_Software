@@ -38,7 +38,7 @@ def Duplicate(duplicate,usersemailadd,password,sendersemailadd,FolderName = 'Mar
                 j += 1
                 os.remove(path)
 
-    fd.write("\n\nTotal Numbers of Files in Entered Directory were : %d\n"%i)
+    fd.write("\n\nTotal Numbers of Duplicate Files in Entered Directory are : %d\n"%i)
     fd.write("\nNumber of Files After Deleteing Duplicate Files are : %d\n"%j)
     fd.write("\n---------------------Thank You For Using This Application Now You Can Check Your Directory--------------------")
 

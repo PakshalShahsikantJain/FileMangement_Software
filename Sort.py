@@ -16,7 +16,6 @@ def Sort(path) :
     i = 0
 
     for Folder,SubFolder,Filename in os.walk(path) :
-        
         for file in Filename :
             arr = [] 
             brr = []

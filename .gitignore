@@ -1,8 +1,0 @@
-/build
-/dist
-/__pycache__
-
-/FolderManger.spec
-/Script.spec
-/password.txt
-/.gitignore

@@ -4,3 +4,6 @@
 
 /FolderManger.spec
 /Script.spec
+
+/.gitignore
+/password.txt

@@ -21,17 +21,22 @@ from Sort import *
 
 def Click(window) :
     #Required Variables
-    res = txt.get();
-    res2 = txt2.get();
+    # res = txt.get();
+    # res2 = txt2.get();
     res3 = txt3.get();
     
-    if (len(res) == 0 or len(res2) == 0 or len(res3) == 0) :
+    # if (len(res) == 0 or len(res2) == 0 or len(res3) == 0) :
+    #     #Message Box Used To Display Specific Message
+    #     messagebox.showerror("Error","Please Fill Up The Details Before Continuing!!!!")
+    #     return;
+
+    if (len(res3) == 0) :
         #Message Box Used To Display Specific Message
-        messagebox.showinfo("Error : ","Please Fill Up The Required Data!\nTry Again!")
+        messagebox.showerror("Error","Please Fill Up The Details Before Continuing!!!!")
         return;
 
-    txt.delete(0,END);
-    txt2.delete(0,END);
+    # txt.delete(0,END);
+    # txt2.delete(0,END);
     txt3.delete(0,END);
 
     #Asking User To Select Specific Directory Path To Delete Duplicate Files 
@@ -40,20 +45,24 @@ def Click(window) :
         window.destroy();
         main();
         return;
-
+    
     #Printing Values On Terminal for testing Purpose
-    print("Admin Email Address : ",res);
-    print("Password of Email Address: ",res2);
+    # print("Admin Email Address : ",res);
+    # print("Password of Email Address: ",res2);
     print("Recipient's Email Address : ",res3);
     print("Directory Path  : ",filepath);
     
     #Call to click() function imported from Delete Package
-    thread = threading.Thread(target=click,args=(filepath,res,res2,res3,))
-    thread.start()
+    # thread = threading.Thread(target=click,args=(filepath,res,res2,res3,))
+    # thread.start()
+
+    # click(filepath,res,res2,res3);
+
+    click(filepath,res3);
 
 ##################################################################################################################
 
-def SCRIPT(window) :
+def DeleteFile(window) :
     window.destroy();
 
     #Second GUI(Window) of Software
@@ -63,48 +72,52 @@ def SCRIPT(window) :
     window2.title("Folder Management Software")
     
     #Geometry of Second Window 
-    window2.geometry('800x500')
+    window2.geometry('800x250')
 
     #Required Variables Declared(Globally)
-    global txt;
-    global txt2;
+    # global txt;
+    # global txt2;
     global txt3;
 
     #Required Labels
-    lbl = Label(window2,font=(20),text="Admin Email Address  : ")
-    lbl2 = Label(window2,font=(20),text="Password (Email Address)  : ")
-    lbl3 = Label(window2,font=(20),text = "Recipient's Email Address : ")
+    # lbl = Label(window2,font=(20),text="Admin Email Address  : ")
+    # lbl2 = Label(window2,font=(20),text="Password (Email Address)  : ")
+    
+    Note = Label(window2,font=("20"),text="Please Enter Your Email ID Below To Receive Detailed Report.");
+    Note.place(relx = 0.38,rely=0.1,anchor=CENTER)
+    
+    lbl3 = Label(window2,font=(20),text = "Email Address : ")
 
     #Setting Postion of Labels in Window
-    lbl.grid(column=1, row=0,sticky= W,pady= 20)
-    lbl2.grid(column= 1, row = 3,sticky=W,pady=20)
-    lbl3.grid(column= 1, row = 6,sticky=W,pady=20)
+    # lbl.grid(column=1, row=0,sticky= W,pady= 20)
+    # lbl2.grid(column= 1, row = 3,sticky=W,pady=20)
+    lbl3.place(relx=0.12,rely=0.29,anchor=CENTER)
 
     #Required Text Fiels
-    txt = Entry(window2,width=50)
-    txt2 = Entry(window2,show="*",width=50)
+    # txt = Entry(window2,width=50)
+    # txt2 = Entry(window2,show="*",width=50)
     txt3 = Entry(window2,width=50)
 
     #Setting Postion of Text Fields In Window
-    txt.grid(column=2,row=0,pady = 20)
-    txt2.grid(column= 2, row = 3,pady=20)
-    txt3.grid(column= 2, row = 6,pady=20)
+    # txt.grid(column=2,row=0,pady = 20)
+    # txt2.grid(column= 2, row = 3,pady=20)
+    txt3.place(relx=0.4,rely=0.3,anchor=CENTER)
 
     #Label Used To Dispaly Notes
-    Note =  Label(window2,font=("20"),foreground="Red",text="Note : Please Make Sure That Your Internet Connection is Turned On....!!")
-    Note.place(relx = 0.5,rely=0.5,anchor=CENTER)
+    Note2 = Label(window2,font=("20"),foreground="Red",text="Note : Please Make Sure That Your Internet Connection is Turned On....!!")
+    Note2.place(relx = 0.5,rely=0.5,anchor=CENTER)
 
     #Using Below Button Click() Function is Called
     Btn = tkinter.Button(window2, text='Select Folder',font=(24),height=2,width=16,command=lambda : Click(window2),bg="Dark Gray",fg="white")
-    Btn.place(relx = 0.3,rely=0.7,anchor=CENTER)
+    Btn.place(relx = 0.3,rely=0.75,anchor=CENTER)
 
     #Using Below Button Close() Function is Called
     Quit_btn = tkinter.Button(window2, text="Close", font=(24),bg="Dark Gray",fg="white",height=2,width=16,command=lambda:DeleteClose(window2))
-    Quit_btn.place(relx = 0.7,rely=0.7,anchor=CENTER);
+    Quit_btn.place(relx = 0.7,rely=0.75,anchor=CENTER);
 
 ##################################################################################################################################################
 
-def Click2(window) :
+def SortFile(window) :
     filepath = filedialog.askdirectory(title="Dialog Box");
     if (len(filepath) == 0) :
         window.destroy();
@@ -132,8 +145,8 @@ def SORT(window) :
     Warning =  Label(window3,font=("20"),foreground="Dark Red",text="Warning : Don't Try To Sort Main OS Folder!!!!")
     Warning.place(relx = 0.5,rely=0.3,anchor=CENTER)
 
-    #Using Below Button Click2() function is Called
-    Btn = tkinter.Button(window3, text='Select Folder',font=(24),height=2,width=20,command=lambda:Click2(window3),bg="Dark Gray",fg="white")
+    #Using Below Button SortFile() function is Called
+    Btn = tkinter.Button(window3, text='Select Folder',font=(24),height=2,width=20,command=lambda:SortFile(window3),bg="Dark Gray",fg="white")
     Btn.place(relx = 0.3,rely=0.6,anchor=CENTER)
 
     #Using Below Button Close() function is Called 
@@ -181,15 +194,16 @@ def main() :
     Btn.place(relx = 0.2,rely=0.6,anchor=CENTER)
 
     #Using Below Button SCRIPT() function is Called 
-    Btn2 = tkinter.Button(window, text='Delete Duplicate Files',font=(24),height=2,width=25,command=lambda:SCRIPT(window),bg="Dark Gray",fg="white")
+    Btn2 = tkinter.Button(window, text='Delete Duplicate Files',font=(24),height=2,width=25,command=lambda:DeleteFile(window),bg="Dark Gray",fg="white")
     Btn2.place(relx = 0.5,rely=0.6,anchor=CENTER)
     
     #Using Below Button Whole Project is Closed
     Quit_btn = tkinter.Button(window, text="Close", font=(24),bg="Dark Gray",fg="white",height=2,width=20,command=window.destroy)
     Quit_btn.place(relx = 0.8,rely=0.6,anchor=CENTER);
+    
+    window.mainloop();
 
-    window.mainloop()
-
+    return;
 #Starting Point of Project
 if __name__ == "__main__" :
     #Call To main() function

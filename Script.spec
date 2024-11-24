@@ -35,4 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=['C:\\Users\\ADMIN\\Downloads\\.ico\\python_folder_windows_icon_icon_257064.ico'],
 )
